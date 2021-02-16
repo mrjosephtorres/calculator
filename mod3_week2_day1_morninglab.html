@@ -1,0 +1,93 @@
+ <!-- https://perscholas.instructure.com/courses/629/assignments/90488 -->
+ <!-- calculator  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+
+	body {
+		margin: 200px 200px;
+	}
+
+    table{
+       text-align: center;
+       border: 2px solid black;
+       height: 300px;
+       width: 300px;
+       background-color: turquoise;
+       color: red;
+       border-collapse: collapse;
+       font-weight: bold;
+       box-shadow: 10px 10px 5px #888888;
+  }
+  	button {
+  		border: 1px solid red;
+      font-weight: bold;
+  	}
+	td {
+		width: 25%;
+    	border: 2px solid black;
+	}
+	.head {
+		background-color: black;
+	}
+	.operation {
+		background-color: orange;
+	}
+	.function {
+		background-color: gray;
+  	}
+  	.input {
+    	font-weight: bold;
+  	}
+
+</style>
+</head>
+<body>
+
+<form name="Calc">
+<table>
+<tr>
+    <td class="head" colspan="4">
+      <input type="text" name="Input">
+    </td>
+  </tr>
+  <tr>
+    <td class="function"><input type="button" value="AC" onclick="Calc.Input.value = ' '"></td>
+    <td class="function"><input type="button" value= " ( " onclick="Calc.Input.value += '('"></td>
+    <td class="function"><input type="button" value=" ) " onclick="Calc.Input.value += ')'"></td>
+    <td class="operation"><input type="button" value="&divide;" onclick="Calc.Input.value += '/'"></td>
+  </tr>
+    <tr>
+    <td><input type="button" value=" 7 " onclick="Calc.Input.value += '7'"></td>
+    <td><input type="button" value=" 8 " onclick="Calc.Input.value += '8'"></td>
+    <td><input type="button" value=" 9 " onclick="Calc.Input.value += '9'"></td>
+    <td class="operation"><input type="button" value=" x " onclick="Calc.Input.value += '*'"></td>
+  </tr>
+    <tr>
+    <td><input type="button" value=" 4 " onclick="Calc.Input.value += '4'"></td>
+    <td><input type="button" value=" 5 " onclick="Calc.Input.value += '5'"></td>
+    <td><input type="button" value=" 6 " onclick="Calc.Input.value += '6'"></td>
+    <td class="operation"><input type="button" value=" - " onclick="Calc.Input.value += '-'"></td>
+  </tr>
+    <tr>
+    <td><input type="button" value=" 1 " onclick="Calc.Input.value += '1'"></td>
+    <td><input type="button" value=" 2 " onclick="Calc.Input.value += '2'"></td>
+    <td><input type="button" value=" 3 " onclick="Calc.Input.value += '3'"></td>
+    <td class="operation"><input type="button" value=" + " onclick="Calc.Input.value += '+'"></td>
+  </tr>
+   <tr>
+    <td colspan="2"><input style="width:100%;" type="button" value="0" onclick="Calc.Input.value += '0'"></td>
+<!--       <input style="width: 100%;" type="button" name="equal" value="=" onclick="Calc.Input.value = eval(Calc.Input.value)"> -->
+    </td>
+   	<td><input type="button" value=" . " onclick="Calc.Input.value += '.'"></td>
+   	<td class="operation"><input type="button" value=" = " onclick="Calc.Input.value = eval(Calc.Input.value)"></td>
+  </tr>
+</table>
+</form>
+
+</body>
+</html>
